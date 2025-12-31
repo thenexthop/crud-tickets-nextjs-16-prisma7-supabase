@@ -1,0 +1,20 @@
+meta {
+  name: UPDATE ticket BY ID
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3000/api/tickets/1111
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Titulo (UPDATED)",
+    "description": "Este ticket fue creado usando Prisma ORM + MariaDB.",
+    "assignedTo": "thenexthop",
+    "status": "TODO"
+  }
+}
